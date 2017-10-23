@@ -51,10 +51,7 @@ public class AjaxSerachServlet extends HttpServlet {
         System.out.println("参数是："+keyword);
         //获取关联的数据
         List<String> list=getData(keyword);
-        System.out.println(list);
-        //这句话没有输出内容
-     //   System.out.println(JSONObject.fromObject(list).toString());
-        //不成功？？？？为什么?
+     //   System.out.println(list);
         //返回json格式 转换为字符串  写入响应流
         resp.getWriter().write(JSONArray.fromObject(list).toString());
     }
